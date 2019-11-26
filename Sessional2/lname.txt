@@ -1,0 +1,17 @@
+Das
+Gupta
+Kabra
+Kabra
+Padukone
+Pant
+Solanki
+Srivastava
+The count is : 2
+Srivastava
+Solanki
+Pant
+Padukone
+Kabra
+Kabra
+Gupta
+Das

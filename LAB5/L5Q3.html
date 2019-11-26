@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>The stacking order</title>
+<style type="text/css">
+.layerstyle{
+border:solid_thick_black;
+padding:1em;
+width:300px;
+background-color:blue;
+position:absolute;
+top:100px;
+left:200px;
+z-index:0;
+}
+.layer2style{
+border:solid_thick_green;
+padding:1em;
+width:300px;
+background-color:purple;
+position:absolute;
+top:240px;
+left:240px;
+z-index:0;
+}
+.layer3style{
+border:solid_thick_red;
+padding:1em;
+width:300px;
+background-color:blue;
+position:absolute;
+top:140px;
+left:240px;
+z-index:0;
+}
+</style>
+<script type="text/javascript">
+var toplayer="layer3"
+function mover(toTop)
+{
+var oldTop=document.getElementById(toplayer).style
+var newTop=document.getElementById(toTop).style
+oldTop.z-index=0
+newTop.z-index=10
+toplayer=document.getElementById(toTop)
+alert(toplayer);
+}
+</script>
+</head>
+<body bgcolor="red">
+<h2 style="text-align:center;color:yellow">XYZ</h2>
+<div style="z-index:10" onmouseover="mover('layer')">ABC</div>
+<div style="z-index:10" onmouseover="mover('layer2')">PQR</div>
+</body>
+</html>
+<html>
+<head>
+<style type="text/css">
+.layer1style{
+z-index:1;
+}
+.layer2style{
+z-index:2;
+}
+.layer3style{
+z-index:3;
+}
+</style>
+<script type="text/javascript">
+var toplayer="layer3"
+var arig
+function mover(toTop,pos)
+{
+var newTop=document.getElementById(toTop.style)
+newTop.z-index=10
+toplayer=document.getElementById(toTop)
+arig=pos;
+}
+function moveback()
+{
+document.getElementById(toplayer).style.z-index=arig;
+}
+</script>
+</head>
+<body>
+<div style="z-index:1" onmouseover="mover('layer1')" onmouseout="moveback()">ABC</div>
+<div style="z-index:2" onmouseover="mover('layer2')" onmouseout="moveback()">XYZ</div>
+<div style="z-index:3" onmouseover="mover('layer3')" onmouseout="moveback()">PQR</div>
+</body>
+</html>

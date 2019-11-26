@@ -1,0 +1,5 @@
+p#p1{color:red;font-family:"Courier New";font-size:300%;}
+p#p1:hover{color:green;font-family:"Times New Roman";background-color:yellow;}
+ol{list-style-type:lower-roman;}
+ol:hover{color:red;font-family:"Courier New";font-size:300%;}
+.ayu{color:blue;background-color:orange;font-size:200%;}

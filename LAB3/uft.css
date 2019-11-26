@@ -1,0 +1,9 @@
+h1,p{color:red;background-color:yellow;text-decoration:line-through overline underline;font-family:"Courier New";padding:10px;margin:30px}
+h1:hover {color:green; text-decoration:none;font-size:xx-large;font-family:"Times New Roman"}
+img{border-style:ridge;
+	border-width:20px;
+	border-color:red green pink blue;
+	margin:30px}
+a:link {color: red; font-weight: bold;)
+a:visited {color: red; border:groove;}
+ol{list-style-type:decimal-leading-zero}

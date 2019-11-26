@@ -1,0 +1,35 @@
+<html>
+<title>Trying JS</title>
+<body onload="alert('Swagat hai')"></body>
+<script type="text/javascript">
+var a=new Array(3)
+a[0]=new Array(3)
+a[1]=new Array(3)
+a[2]=new Array(3)
+for(var i=0;i<3;i++)
+	for(var j=0;j<3;j++)
+		a[i][j]=parseInt(window.prompt("Enter a number"))
+alert("Enter matrix 2")		
+var b=new Array(3)
+b[0]=new Array(3)
+b[1]=new Array(3)
+b[2]=new Array(3)
+for(var i=0;i<3;i++)
+	for(var j=0;j<3;j++)
+		b[i][j]=parseInt(window.prompt("Enter a number"))
+alert("The Addition is")		
+var c=new Array(3)
+c[0]=new Array(3)
+c[1]=new Array(3)
+c[2]=new Array(3)
+for(var i=0;i<3;i++)
+	for(var j=0;j<3;j++)
+		c[i][j]=a[i][j]+b[i][j]
+for(var i=0;i<3;i++)
+{
+	for(var j=0;j<3;j++)
+		document.write(c[i][j]+"\t")
+	document.writeln("<br />")
+}
+</script>
+</html>

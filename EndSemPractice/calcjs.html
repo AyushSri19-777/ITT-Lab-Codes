@@ -1,0 +1,43 @@
+<html>
+<head>
+<h1 align="center">Calculator</h1>
+<link rel="stylesheet" href="sty.css">
+<script type="text/javascript">
+function calculate()
+{
+	var x=parseInt(document.getElementById("a1").value);
+	var y=parseInt(document.getElementById("a2").value);
+	var op=document.getElementById("a3").value;
+	var res=0;
+	//document.writeln("The value of x: "+x);
+	if(op=="+")
+		res=x+y;
+	else if(op=="-")
+		res=x-y;
+	else if(op=="*")
+		res=x*y;
+	else if(op=="/")
+		res=parseInt(x/y);
+document.getElementById("a4").value=res+"";
+}
+</script>
+</head>
+<body>
+<form method="get">
+<input type="text" id="a1">
+<select id="a3">
+<option >+</option>
+<option >-</option>
+<option >*</option>
+<option  selected=True>/</option>
+</select>
+<input type="text" id="a2"> <br />
+<input type="text" id="a4"><br/>
+<input type="button" onclick="calculate()" value="Calculate">
+</form>
+<p class="fulit" >Happy birthday <span class="shi">Shivano</span>!</p>
+<a href="https://www.istemanipal.com">
+<img src="lm35.jfif" width="200px" height="200px">
+</a>
+</body>
+</html>

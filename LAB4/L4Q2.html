@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript">
+	var str=window.prompt("Enter a string");
+	var f=str.split(" ");
+	
+	for(var i=0;i<f.length;i++)
+	{
+		document.writeln(printLatinWord(f[i])+" ");
+	}
+	function printLatinWord(str)
+	{
+		for(var i=0;i<str.length;i++)
+		{
+			if(str.charAt(i)=='a'||str.charAt(i)=='e'||str.charAt(i)=='i'||str.charAt(i)=='o'||str.charAt(i)=='u')
+			break;
+		}
+		var k=str.substring(0,i);
+		var s=str.substring(i);
+		return s+k+"ay";			
+	}
+</script>
+</head>
+</html>

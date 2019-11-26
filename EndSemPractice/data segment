@@ -1,0 +1,51 @@
+data segment
+data ends
+code segment
+assume cs:code
+start:
+mov bh,0ffh
+up: 
+mov dl,bh
+mov cl,4
+shr dl,cl
+cmp dl,0ah
+jc down1
+add dl,07h
+down1:
+add dl,30H
+mov ah,02
+int 21h
+mov dl,bh
+and dl,0fh
+cmp dl,0ah
+jc down2
+add dl,07
+down2:
+add dl,30h
+mov ah,02
+int 21h
+sub bh,01
+mov dl,13
+mov ah,02
+int 21h
+call delay
+mov dl,0ffh
+mov ah,06
+int 21h
+jnz down
+jmp up
+down:
+mov ah,4ch
+int 21h
+delay proc
+mov si,1000h
+up2:mov di,500h
+up1:
+dec di
+jnz up1
+dec si
+jnz up2
+ret
+delay endp
+code ends
+end start

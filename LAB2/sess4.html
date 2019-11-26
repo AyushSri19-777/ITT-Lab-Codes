@@ -1,0 +1,19 @@
+<html>
+<body>
+<form method="get">
+Name:<input type="text" id="t1"/><br/>
+DOB: <input type="text" id="t2"/><br/>
+<input type="button" value="Press" onClick="myfunc()"/>
+</form>
+<script type="text/javascript">
+function myfunc(){
+var x=document.getElementById("t1").value;
+//document.writeln(x.value)
+var d=document.getElementById("t2").value;
+var f=d.substring(6);
+f=parseInt(f)
+alert("Name="+x);
+alert("Age="+(2019-f));
+}
+</script>
+<html>

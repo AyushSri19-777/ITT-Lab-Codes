@@ -1,0 +1,35 @@
+<html>
+<body>
+<h3>Enter two numbers and select which operation to perform</h3>
+<form>
+<input type="text" id="t1"/>
+<select id="t2">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*" selected="true">*</option>
+<option value="/">/</option>
+</select>
+<input type="text" id="t3"/><br/>
+<input type="button" onclick="myfunc()" value="Calculate" id="b1"/><br/>
+<input type="text" id="t4"/>
+</form>
+</body>
+<script type="text/javascript">
+function myfunc(){
+var x=parseInt(document.getElementById("t1").value)
+var y=parseInt(document.getElementById("t3").value)
+var z=document.getElementById("t2").value
+var res=0
+if(z=="+")
+	res=x+y
+else if(z=="-")
+	res=x-y
+else if(z=="*")
+	res=x*y
+else
+	res=parseInt(x/y)
+document.getElementById("t4").value=res+""
+}
+</script>
+</html>
+

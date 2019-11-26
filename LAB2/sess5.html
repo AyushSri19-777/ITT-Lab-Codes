@@ -1,0 +1,33 @@
+<html>
+<body>
+<h3 id="h">4</h3>
+<input type="button" value="DABA DE" onClick="myfunc()"/>
+</body>
+<script type="text/javascript">
+	function myfunc(){
+	var x=document.getElementById("h").innerHTML
+	x=parseInt(x)
+	//document.writeln(x)
+	document.writeln("<table border='5'>");
+	for(var i=1;i<=10;i++)
+	{
+		document.writeln("<tr><td>"+x+"</td><td>"+i+"</td><td>"+(x*i)+"</td></tr>")
+	}
+	document.writeln("</table>")
+	var str=["fr","fg","ae","lin"]
+	var f="Ayuushin"
+	document.writeln(f.match(/in/g))
+	document.writeln(f.substr(4,7)+"$"+f.substring(4,7)+"$"+f.slice(4,7))
+	document.writeln(str.splice(2,2,"daa","os","itt"))
+	document.writeln(str.pop())
+	document.writeln("<br/")
+	//document.writeln("<table border='5'>");
+	for(var i=1;i<=10;i++)
+	{
+		document.writeln("<input type='text' value='"+(x*i)+"'/><br/>")
+	}
+	//document.writeln("</table>")
+	}
+</script>
+</html>
+	

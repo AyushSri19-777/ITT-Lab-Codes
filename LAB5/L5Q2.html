@@ -1,0 +1,25 @@
+<html>
+<script type="text/javascript">
+	var x=window.prompt("Enter a string")
+	for(var i=0;i<x.length;i++)
+	{
+		var d=x.charAt(i)
+		if(d=="a"||d=="e"||d=="i"||d=="o"||d=="u")
+			break;
+	}
+	if(i==x.length)
+	document.writeln("No vowel present")
+	else
+	document.writeln("The position of leftmost vowel "+i)
+	var y=window.prompt("Enter a number")
+	var rev=0, a
+	y=parseInt(y) 
+	while(y!=0)
+	{
+		a=parseInt(y%10)
+		rev=rev*10+a
+		y=parseInt(y/10)
+	}
+	document.writeln("<br/>The reverse= "+rev)
+</script>
+</html>
